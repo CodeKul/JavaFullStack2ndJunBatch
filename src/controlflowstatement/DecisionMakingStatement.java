@@ -1,5 +1,27 @@
 package controlflowstatement;
-
+/**
+ * There are 4 types of if statements
+ * 1. Simple if
+ * 2. if-else stmt
+ * 3. if-else-if ladder
+ * 4. Nested if
+ *
+ * *** Switch Statement -
+ * switch(expr) //int,short,byte,char,String - java 7{
+ * case 1: // cases can not be duplicate
+ * stmts;
+ * break;// terminates switch block
+ * case 2:
+ * stmts;
+ * break;
+ * .
+ * .
+ * .
+ * .case 10;
+ * default: // optional
+ * stmts
+ * }
+ */
 public class DecisionMakingStatement {
     public static void main(String args[]) {
         String city = "Pune";
