@@ -1,0 +1,60 @@
+- object oriented programming
+- Simula is first oop language
+- if the programming paradigm where everything is represented as an object is known
+  as truly object-oriented programming language
+- smalltalk is first truly oop language
+- Java,C#,PHP,Python
+
+Object:
+	- real world entity
+	- eg Pen,Laptop,Mobile,Chair,Table,Clock,watch
+
+Explain OOP concept?
+1. Object
+	- real world entity
+	- instance of a class
+	- has state/property & behaviour, it can be logical or physical
+	- consumes space/memory
+	- Cat
+		state : color,name,breed
+		behaviour : running,eating,meow
+	  Car
+	    state : color,model,name,wheel,gearNo,speed
+	    behaviour : run
+	  Mobile
+	    state : model,color,name
+	    behaviour : calling,ringing,messaging,take pic
+
+2. Class
+	- collection of objects
+	- logical entity
+	- a blueprint
+	- does not consume any space
+	- contains fields,methods,constructors,blocks,nested classes & interface
+	- Syntax :
+		class class_name{
+			fields;
+			methods;
+			constructors;
+			blocks;
+		}
+
+3. Inheritance
+	- when an object acquires all the properties and behaviours of a parent object
+	- provides code re-usability
+	- used to achieve run polymorphism
+
+4. Polymorphism
+	- one task is performed in different ways
+	- a cat sounds meow,lion sounds roar & dog sounds woof
+
+5. Abstraction
+	- hiding internal details & showing functionality
+	- eg. washing machine, don't know internal processing
+
+6. Encapsulation
+	- binding or wrapping code & data together into a single unit
+	- eg Capsule, wrapped with different medicines
+
+Explain PIE?
+- Polymorphism,Inheritance,Encapsulation
