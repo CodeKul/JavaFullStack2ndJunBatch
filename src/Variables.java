@@ -18,8 +18,8 @@
  * memory
  */
 public class Variables {
-    int z = 30; //instance variable
     static int c = 50; //static variable
+    int z = 30; //instance variable
 
     public static void main(String args[]) {
         int a = 10;//local variables

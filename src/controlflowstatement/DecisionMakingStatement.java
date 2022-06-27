@@ -1,11 +1,12 @@
 package controlflowstatement;
+
 /**
  * There are 4 types of if statements
  * 1. Simple if
  * 2. if-else stmt
  * 3. if-else-if ladder
  * 4. Nested if
- *
+ * <p>
  * *** Switch Statement -
  * switch(expr) //int,short,byte,char,
  * Integer,Short,Byte,String - java 7{
@@ -48,14 +49,13 @@ public class DecisionMakingStatement {
                     System.out.println("Pune is in India");
                 }
             }
-        }
-        else{
+        } else {
             System.out.println("You are from other country");
 
         }
 
         int ch = 2;
-        switch (ch){
+        switch (ch) {
             case 1:
                 System.out.println("One");
                 break;

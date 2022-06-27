@@ -1,14 +1,14 @@
 package thiskeyword;
 
 /**
- *   3. used to invoke current class constructor
+ * 3. used to invoke current class constructor
  */
 public class Bike {
     int bikeNo;
     String bikeName;
 
     public Bike() {
-        this(101,"Activa");
+        this(101, "Activa");
         System.out.println("in Default constructor");
     }
 
@@ -17,13 +17,15 @@ public class Bike {
         this.bikeNo = bikeNo;
         this.bikeName = bikeName;
     }
-    void display(){
+
+    void display() {
         System.out.println("Bike Details");
-        System.out.println("Bike No: "+bikeNo);
-        System.out.println("Bike Name: "+bikeName);
+        System.out.println("Bike No: " + bikeNo);
+        System.out.println("Bike Name: " + bikeName);
     }
 }
-class BikeImpl{
+
+class BikeImpl {
     public static void main(String[] args) {
         Bike bike = new Bike();
         bike.display();

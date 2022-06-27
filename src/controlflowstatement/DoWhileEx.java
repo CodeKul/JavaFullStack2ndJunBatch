@@ -3,9 +3,9 @@ package controlflowstatement;
 public class DoWhileEx {
     public static void main(String[] args) {
         int no = 51;
-        do{
+        do {
             System.out.println("Hii");
             no++;
-        }while (no<=5);
+        } while (no <= 5);
     }
 }

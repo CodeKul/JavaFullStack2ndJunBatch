@@ -9,7 +9,7 @@ public class VowelsEx {
         char ch = sc.next().toLowerCase().charAt(0);
         //String ch1 = sc.next();
 
-        switch (ch){
+        switch (ch) {
             case 'a':
                 System.out.println("Vowel");
                 break;

@@ -5,17 +5,19 @@ public class Employee {
     int id;
     String name;
     String companyName;
-    Employee(){
+
+    Employee() {
         System.out.println("In Default Constructor");
     }
-    void display(){
-        System.out.println("Id: "+id);
-        System.out.println("Name: "+name);
-        System.out.println("Company Name: "+companyName);
+
+    void display() {
+        System.out.println("Id: " + id);
+        System.out.println("Name: " + name);
+        System.out.println("Company Name: " + companyName);
     }
 }
 
-class EmployeeImpl{
+class EmployeeImpl {
     public static void main(String[] args) {
         Employee e1 = new Employee();
         e1.display();

@@ -5,22 +5,26 @@ package thiskeyword;
  */
 public class A {
     int n;
-    void m(A a){
+
+    public static void main(String[] args) {
+        A a = new A();
+        a.n();
+    }
+
+    void m(A a) {
         this.p();
         System.out.println("call current class method m");
     }
-    void n(){
+
+    void n() {
         System.out.println("n method gets called");
         m(this);
 
         System.out.println("exit from n");
     }
-    void p(){
+
+    void p() {
         System.out.println("P method");
-    }
-    public static void main(String[] args) {
-        A a = new A();
-        a.n();
     }
 }
 

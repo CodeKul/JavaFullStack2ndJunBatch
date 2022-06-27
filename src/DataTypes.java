@@ -5,8 +5,8 @@
  */
 
 public class DataTypes {
-    public static void main(String args[]){
-        boolean flag =false;
+    public static void main(String args[]) {
+        boolean flag = false;
         byte b = 0;
         short s = 0;
         int a = 0;
