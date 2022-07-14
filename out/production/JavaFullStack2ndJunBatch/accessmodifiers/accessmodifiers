@@ -9,7 +9,7 @@ Types of modifiers
 
 	b) default
 		- only accessible within the package, we cannot accessed from outside the class
-		- if do not specifies access modifiers,it will be default
+		- if we do not specifies access modifiers,it will be default
 
 	c) protected
 		- within the package & outside the package through the inheritance only
