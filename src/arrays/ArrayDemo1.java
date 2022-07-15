@@ -15,6 +15,5 @@ public class ArrayDemo1 {
         for (int i=0;i<10;i++){
             System.out.print(a1[i]+" ");
         }
-
     }
 }
