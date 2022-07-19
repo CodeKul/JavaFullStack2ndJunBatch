@@ -14,6 +14,5 @@ public class Matrix2Multiplication {
             }
             System.out.println();
         }
-
     }
 }
