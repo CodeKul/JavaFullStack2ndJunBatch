@@ -30,7 +30,9 @@ public class TryCatchDemo {
             str = "CODEKUL";
             System.out.println(str.toLowerCase());
         }
-
+        catch (Exception e){
+            e.printStackTrace();
+        }
         System.out.println("Result: "+result);
         System.out.println("Rest of the code");
     }
