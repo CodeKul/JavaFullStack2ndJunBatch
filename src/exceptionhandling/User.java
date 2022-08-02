@@ -55,8 +55,8 @@ class Account{
 
 interface Transaction{
     void saveUser(User user);
-    void depositAmount(double depositAmount);
-    void withdrawAmount(double withdrawAmount);
+    void depositAmount(double depositAmount) throws InvalidAmountException;
+    void withdrawAmount(double withdrawAmount) throws InsufficientBalanceException;
     void display();
 }
 
@@ -72,21 +72,21 @@ class TransactionImpl implements Transaction{
     }
 
     @Override
-    public void depositAmount(double depositAmount) {
+    public void depositAmount(double depositAmount) throws InvalidAmountException{
         if (depositAmount <= 0) {
-            throw new ArithmeticException("Invalid Amount");
+            throw new InvalidAmountException("Invalid Amount");
         }
         balance += depositAmount;
         System.out.println("Amount after deposit "+balance);
     }
 
     @Override
-    public void withdrawAmount(double withdrawAmount) {
+    public void withdrawAmount(double withdrawAmount) throws InsufficientBalanceException {
         if (balance < withdrawAmount){
-            throw new ArithmeticException("Insufficient Balance");
+            throw new InsufficientBalanceException("Insufficient Balance");
         }
         balance-=withdrawAmount;
-        System.out.println("AMount after withraw "+balance);
+        System.out.println("AMount after withdraw "+balance);
     }
 
     @Override
@@ -120,13 +120,13 @@ class BankOperation{
         System.out.println("Enter amount for deposit");
         try{
             transaction.depositAmount(sc.nextDouble());
-        }catch (ArithmeticException e){
+        }catch (InvalidAmountException e){
             System.out.println(e.getMessage());
         }
         System.out.println("Enter withdraw amount");
         try {
             transaction.withdrawAmount(sc.nextDouble());
-        }catch (ArithmeticException e){
+        }catch (InsufficientBalanceException e){
             System.out.println(e.getMessage());
         }
         transaction.display();
