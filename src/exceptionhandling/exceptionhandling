@@ -77,6 +77,10 @@ Difference between Throw & Throws
 3. within the method                    3. with method signature
 
 Difference between final vs finally vs finalize
+	final               finally               finalize
+1. keyword              1.block               1.method
+2. can be variable,     2.used in exception   2.before destroying object
+	method,class          handling              finalize() gets called
 
 
 

@@ -1,0 +1,29 @@
+WAP to create Account class
+1. Data members :  accountNo(long),accountType(String),balance(double),username(String),bankName(String)
+2. Methods :
+             void addAccount(); // no user input required
+             void displayData(); // Display Data in proper manner
+             void withdrawMoney(double amount); // balance must not be negative & amount requested
+                                                    for withdrawal
+                                                    is less than or equal to balance,Display balance
+                                                    after withdrawal.
+                                                    Otherwise show Insufficient Balance.
+             void depositMoney(double amount); // display msg with Balance after deposited money
+3. Use do-while loop to perform the operations:
+    1. Withdraw Money
+    2. Deposit Money
+    3. Display
+    4. Exit
+    show "Wrong Choice" if user entered different options
+4. It's mandatory for you to call addAccount() before do-while loop
+5. all data members of class are private and methods are public,use static keyword for any of the above data members
+6. Use addAccount() to entered details
+
+---------------------------------------------------------------------------------
+
+2) Define a class "Employee" having private members (id,name,department,salary).
+Define default and parametrised constructor.create subclass called "Manager" with
+private member bonus.
+Define method accept() & display() in  both class.
+Create n objects of the manager class & display details of manager class
+having max total salary(salary+bonus)
