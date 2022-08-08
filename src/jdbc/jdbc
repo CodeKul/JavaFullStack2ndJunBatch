@@ -66,3 +66,13 @@ Commands:
 6. describe test;
 7. insert into test values(1,'abc','pune');
 8. select * from test;
+
+9. mysql>  select e.empno 'Emp No',e.ename 'Emp Name',d.dname 'Dept Name'
+       ->  from emp e inner join dept d
+       ->  where e.deptno = d.deptno
+       ->  and e.deptno = 20;
+10.  select e.empno 'Emp No',e.ename 'Emp Name',
+     d.dname 'Dept Name'
+     from emp e inner join dept d
+     where e.deptno = d.deptno
+     and d.dname = 'SALES';
