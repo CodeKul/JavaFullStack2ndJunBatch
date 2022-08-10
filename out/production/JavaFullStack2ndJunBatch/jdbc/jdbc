@@ -76,3 +76,5 @@ Commands:
      from emp e inner join dept d
      where e.deptno = d.deptno
      and d.dname = 'SALES';
+10. select empno,ename ,job,hiredate, TIMESTAMPDIFF(month,hiredate,SYSDATE())exp          from emp where
+     empno in (select mgr from emp);
