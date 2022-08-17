@@ -13,6 +13,7 @@ String:
 - implements java.io.Serializable, Comparable<String>, CharSequence,
                  Constable, ConstantDesc
 - Immutable(can not be changed),unchangeable,unmodifiable
+- once created, the internal state of a string remains the same throughout the execution of the program
 - thread-safe
 
 3 ways to create String
