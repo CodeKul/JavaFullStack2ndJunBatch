@@ -1,0 +1,166 @@
+Generics
+ - allow us to create a single class,interface & method that can be used with different
+    data types
+ - parametrised type
+
+ Advantages:
+ 1. Code Re-usability
+ 2. Compile Time Checking
+ 3. Used with Collection
+
+ Collection
+    - root interface of collections framework hierarchy
+1. List(I)
+	- an ordered collection,follows the insertion order
+	- store & access elements sequentially
+2. ArrayList(C)
+	- provides the functionality of resizable-arrays
+	- implements List(I)
+	- methods are not synchronised
+
+3. Vector(C)
+	- implements List(I)
+	- create resizable-arrays similar to ArrayList
+	- methods are synchronised
+4. Stack(C)
+	- elements are stored & accessed in Last In First Out(LIFO) manner
+	- elements are added to the top of the stack & removed from top of the stack
+	- extends Vector class
+5. LinkedList(C)
+	- data structure Doubly-linked list
+	- 3 fields
+		a) prev
+			- stores an address of prev element
+		b) data
+			- stores the actual data
+		c) next
+			- stores an address of next element
+6. Set(I)
+	- cannot contains duplicate element
+	- added only one null value
+	- unordered collection, it does not follow the insertion order
+7. TreeSet(C)
+	- elements from tree-set are sorted
+8. LinkedHashSet(C)
+9. Queue(I)
+	- elements are stored & accessed in First In First Out(FIFO) manner
+10. Priority Queue(C)
+	- unordered
+	- not a thread safe
+11. Deque
+	- Double Ended Queue
+	- pronounce as Deck
+	- used as a stack or queue
+12. ArrayDeque
+	- not thread-safe
+	- Null elements are prohibited
+
+13. Map(I)
+	- stores key & value pair
+	- keys are unique, values can be duplicate
+	- accepts only one null key, accepts more than one null values
+	- by using key we can access or modify the values
+14. HashMap(C)
+	- stored key & value pair
+	- keys are unique, values can be duplicate
+	- non synchronised
+	- doesn't maintain any order
+
+	- equals()
+	    * checks equality of 2 objects.It compares keys,whether keys are equal or not.
+	    * a method of the Object class
+	    * can be overridden
+	    * it is mandatory to override the hashCode()
+	- hashCode()
+		* a method of the Object class
+		* returns the memory ref of the object in integer form.
+		* the value received from this method is used as bucket no
+		* bucket no is the address of the element inside the map
+		* hash code of null key is 0
+	- buckets
+		* array of node
+		* each node has a data structure like a LinkedList
+		* more than one node can have same bucket
+	- calculating index index = hashcode(key) & (N-1)
+15. LinkedHashMap
+	- a Hashtable & linked list implementation
+	- maintains a doubly linked list running thro all of its entries
+	- follows insertion order
+	- non-synchronised
+	- maintains insertion order
+	- may contains one null key & multiple null values
+16. TreeMap
+	- a red-black tree implementation
+	- storing key-value pair in sorted order
+	- contains only unique elements
+	- cannot have a null key but it can have multiple null values
+	- non-synchronised
+	- maintains ascending order
+
+17. EnumSet
+	- abstract class
+	- cannot have null element
+18. EnumMap
+	- stores key & value pair
+
+Hashing:
+	- process of converting an object into an integer value,The integer value helps in indexing & faster search
+
+Enum:
+	- Enumeration
+	- purpose is to represent group of constants
+	- a data type which contains a fixed set of constants
+
+
+Collections:
+	- consists exclusively of static methods
+
+Comparable:
+	-  java.lang
+	- having only one method i.e int compareTo()
+	- provides single sorting sequence
+Comparator:
+	- java.util
+	- order the objects
+	- having two methods
+		a) int compare()
+		b) boolean equals()
+	- provides multiple sorting sequence
+
+ Note:
+ 1. Generics does not work with primitive data types
+ 2. String class & wrapper classes are implements the Comparable interface.
+
+
+Homework:
+ Priority Queue
+ How hashmap works internally?
+ HashTable in collection?
+ Difference between HashTable & HashMap?
+ Difference between Collection, Collections, collection
+ Difference Between Comparable & Comparator
+ Explain equals() & hashcode()
+
+ Create Class Emp{
+    Integer empId;
+    String name;
+    String mobile;
+ }
+ class EmpImp{
+    main(){
+        list 1 = add the data;
+        list 2 = unique records
+
+    }
+ }
+eg
+list 1
+ 1  A   986
+ 2  B   456
+ 3  C   258
+ 4  D   986
+
+list 2
+ 1  A   986
+ 2  B   456
+ 3  C   258

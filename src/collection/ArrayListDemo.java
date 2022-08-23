@@ -11,6 +11,7 @@ public class ArrayListDemo {
         list.add("Chennai");
         list.add("Kolkata");
         list.add("Madras");
+        list.add("Chennai");
         System.out.println(list);
         System.out.println(list.size());
         list.add(3,"Bangalore");
