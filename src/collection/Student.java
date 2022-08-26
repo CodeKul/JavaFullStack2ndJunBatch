@@ -62,13 +62,11 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", contactNumber='" + contactNumber + '\'' +
-                '}';
+        StringBuilder builder = new StringBuilder("Student Details\n");
+        builder.append("Id :"+id+"\n");
+        builder.append("Full Name : "+firstName+" "+middleName+" "+lastName+"\n");
+        builder.append("Contact No. "+contactNumber+"\n");
+        return builder.toString();
     }
 }
 class StudentImpl{
@@ -78,10 +76,10 @@ class StudentImpl{
         StudentImpl studentImpl = new StudentImpl();
         int ch;
         do{
-            System.out.println("Insert");
-            System.out.println("Update Record");
-            System.out.println("Delete Record");
-            System.out.println("Display");
+            System.out.println("1.Insert");
+            System.out.println("2.Update Record");
+            System.out.println("3.Delete Record");
+            System.out.println("4.Display");
             System.out.println("Enter your choice");
             ch = sc.nextInt();
             switch (ch){
@@ -99,17 +97,33 @@ class StudentImpl{
                 case 3:
                     if (students.isEmpty())
                         System.out.println("List is empty");
+                    else {
+                        studentImpl.deleteRecord(students,sc);
+                    }
                     break;
                 case 4:
                     studentImpl.display(students);
+                    break;
             }
-        }while (true);
+        }while (ch<5);
     }
 
     private void display(List<Student> students){
         Iterator iterator = students.iterator();
         while (iterator.hasNext()){
             System.out.println(iterator.next().toString());
+        }
+    }
+
+    private void deleteRecord(List<Student> students,Scanner sc){
+        System.out.println("Enter student id to delete record");
+        Integer id = sc.nextInt();
+        Iterator<Student> iterator = students.iterator();
+        while (iterator.hasNext()){
+           if (iterator.next().getId() == id){
+               //students.remove(iterator.next());
+               iterator.remove();
+           }
         }
     }
 
