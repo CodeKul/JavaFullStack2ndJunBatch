@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayListDemo {
@@ -24,6 +25,8 @@ public class ArrayListDemo {
         System.out.println(list.indexOf("Bangalore"));
         //list.containsAll()
         list.remove("Kolkata");
+        System.out.println(list);
+        Collections.sort(list);
         System.out.println(list);
     }
 }
