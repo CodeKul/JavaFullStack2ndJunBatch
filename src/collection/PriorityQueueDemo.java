@@ -11,6 +11,7 @@ public class PriorityQueueDemo {
         queue.add(7);
         queue.add(6);
         queue.add(2);
+      //  queue.add(null);
         System.out.println(queue);
         queue.poll();
         System.out.println(queue);
