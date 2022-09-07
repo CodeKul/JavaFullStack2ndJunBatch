@@ -12,11 +12,10 @@ public class PriorityStudentDemo {
         for (Stud s: queue){
             System.out.println(s.toString());
         }
-        queue.remove();
+       // queue.remove();
         System.out.println(queue.peek().toString());
         System.out.println(queue);
-        System.out.println(queue.poll());
-        System.out.println(queue);
+
 
     }
 }
@@ -56,17 +55,8 @@ class Stud implements Comparable<Stud>{
 
     @Override
     public int compareTo(Stud s) {
-
-        if (cgpa > s.cgpa) {
-            System.out.println("in if: ");
-            System.out.println(cgpa+"For id "+s.cgpa);
-            return 1;
-        }
-        else if (cgpa < s.cgpa) {
-            System.out.println("in else: ");
-            System.out.println(cgpa+"For id "+s.cgpa);
-            return -1;
-        }
+        if (cgpa > s.cgpa)
+        return 1;
         return 0;
     }
 }

@@ -41,6 +41,7 @@ Generics
 	- unordered collection, it does not follow the insertion order
 7. TreeSet(C)
 	- elements from tree-set are sorted
+	- we can not add null value
 8. LinkedHashSet(C)
 9. Queue(I)
 	- elements are stored & accessed in First In First Out(FIFO) manner
