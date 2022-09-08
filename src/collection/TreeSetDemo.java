@@ -3,6 +3,7 @@ package collection;
 import java.util.TreeSet;
 
 public class TreeSetDemo {
+
     public static void main(String[] args) {
         TreeSet<Integer> numbers = new TreeSet<>();
         numbers.add(87);
@@ -16,6 +17,5 @@ public class TreeSetDemo {
         System.out.println(numbers);
         System.out.println(numbers.ceiling(97));
         System.out.println(numbers.floor(97));
-
     }
 }
