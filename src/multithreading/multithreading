@@ -1,0 +1,207 @@
+**Thread
+- lightweight process
+- smallest unit
+- independent
+- if there occurs exception in one thread, it doesn't affect other threads
+- shared the memory area
+
+
+Multitasking
+- a process executing multiple tasks simultaneously.
+2 ways to achieve multitasking
+1. Multiprocessing
+	- heavyweight
+	- has a address in memory
+	- cost of communication between the process is high
+	- switching from one process to another process requires some time
+
+2. MultiThreading
+	- a process of executing multiple threads
+	- lightweight
+	- sharing the address space
+	- cost of communication between thread is low
+    - by default in every java application we have at least one thread - main thread
+
+
+Life cycle of Thread
+1. New(Born)
+	- when we create a thread object, thread is born
+
+2. Runnable
+	- when the start() method is invoked that time new thread enters into
+	runnable state
+	- ready for execution
+	- waiting for availability of the processor(CPU)
+
+3. Running
+	- execution of thread
+	- when TS selects a thread from runnable state, it goes into running state
+
+4. waiting/blocked
+	- when a thread is suspended,sleeping or waiting for some time then it is in blocked/
+	waiting state
+
+5. Terminated/Dead
+	- when stop() method is called
+	- when thread run() method completes its execution
+
+Thread Scheduler
+ - part of JVM
+ - decides which thread to run or execute  & which thread to wait
+ - thread is selected only from runnable state
+ - if there is more than one thread in runnable state, then it's up to TS to pick one thread
+
+There are 2 ways to create thread in java
+1. by extending thread class
+	step:
+		a) extends class with Thread class
+		b) override run()
+		c) create an object of extended class
+		d) invoked start()
+2. by implementing Runnable interface
+		a) implementing class with Runnable interface
+		b) override run()
+		c) create an object of implemented class
+		d) create an object of thread class to pass implemented class object as an argument
+		e) invoked start()
+
+Methods:
+1. void run()
+	- used to perform action on a thread
+
+2. void start()
+	- starts the execution of the thread.JVM calls the run() method
+
+3. Thread currentThread()
+	-  Returns a reference to the currently executing thread object
+
+4. void sleep(long ms)
+	- sleep current executing thread for specified no of ms
+	- throws the exception IllegalArgumentException when the time for sleeping is negative
+
+5. void join()
+	- to pause the execution of a current thread until unless the specified thread is dead.
+	why we use join() method?
+		- Our program can have any number of threads.TS decides which thread will get executed.
+		- But  TS doesn't give guarantee to the the order of execution of threads.So, every time
+		we run the code may get different result.
+		- Suppose we go with sleep() method, it pauses the execution of thread for specific time period
+		but we can not predict the exact execution time of a thread
+
+6.  String getName()
+	- returns thread name
+
+7. void setName(String nm)
+	- change name to the thread
+
+8. int getPriority()
+9. void setPriority(int newPriority)
+10. void setDaemon(boolean on)
+11. boolean isDaemon()
+
+12. void yield()
+	- to give the hint to TS a & gives chance to other thread
+	- current running thread give chance to other thread
+	- it causes the currently executing thread object to pause & allow other threads to
+	execute
+
+13. void wait()
+	- defined in Object class
+	- to give up the lock & go to sleep until some other threads calls notify() or notifyAll()
+	- final method
+	- can be called only from within a synchronised block or synchronised method otherwise an exception
+	will occur(IllegalMonitorStateException)
+
+14. void notify()
+	- to wakes up a single thread that called wait() method.
+	- final method
+
+
+15. void notifyAll()
+	- to wake up all threads  that called wait() method
+
+
+
+3 Thread Priority constants:
+1. MIN_PRIORITY
+	- value of MIN_PRIORITY is 1
+2. NORM_PRIORITY
+	- Default priority of a thread is 5
+3. MAX_PRIORITY
+	- value of MAX_PRIORITY is 10
+
+Daemon Thread
+	- a service provider thread that provides service to the user thread.
+	- life of these threads are depend on user threads
+	- i.e when all the user threads terminated/dies, then JVM terminates these threads automatically
+	- eg. Garbage Collector
+	- low priority thread
+	- provides services to user threads for background supporting task
+	- to serve user threads
+
+DeadLock
+ - occur in a situation when a thread is waiting for an object lock,
+  that is acquired by another thread & second thread is
+ waiting for an object lock that is acquired by first thread.
+ Since, both threads are waiting for each other to release the lock
+
+Synchronisation
+	- if we want to allow only one thread to access the shared resource.
+	- prevent thread interference
+	- prevent consistency problem
+
+  Types
+1. Process
+2. Thread Synchronisation
+	a) Mutual Exclusive
+		it will helps keep threads from interfering with one another
+			1. Synchronized method
+			2. Synchronized block
+				- synchronizes portion of method
+			3. static synchronization
+				- lock will be on the class
+	b) Cooperation(Inter-Thread communication)
+		- allowing synchronised threads to communicate with each other
+		- wait(),notify(),notifyAll()
+
+
+Thread Pool
+	- a group of worker threads that are waiting for task & reused many times
+	- collection of pre-initialized threads
+	- facilitates the execution of N number of tasks using the same thread
+	- when any thread completes its execution , it can pickup a new task from the queue and execute it
+	- when all tasks are completed the threads remain active and wait for more tasks in the thread pool
+ ThreadPoolExecutor :
+    - separates the task creation & its execution
+ Advantages
+ 1. better performance
+ 2. saves time
+ 3. no need to create a thread again & again
+ 4. easy to access
+
+Can we start a thread twice?
+- No, After starting a thread,it can never be started again
+- If we do this, we will get IllegalThreadStateException
+
+What if we call run() method directly?
+
+
+
+Notes:
+1. we required at least one process to execute the thread
+2. at a time one thread is executed only
+3. if we want to make user thread as a Daemon thread then we must not be started
+	that thread. Otherwise it will throw IllegalThreadStateException
+4. Thread priorities cannot guarantee that a higher priority thread will always be executed first
+	than the lower priority thread.
+   The selection of the threads for execution depends upon the thread scheduler
+
+Homework
+1. Difference between Thread & Process
+2. difference between yield() & join() & sleep()
+3. movie ticket
+	//no of seats - 150 seats
+	- bookTicket
+4. bank example by static synchronisation
+5. bus ticket reservation
+
