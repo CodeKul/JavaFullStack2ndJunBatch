@@ -10,6 +10,6 @@ class RunnableDemoImpl{
     public static void main(String[] args) {
         RunnableDemo t1 = new RunnableDemo();
         Thread thread = new Thread(t1);
-       // thread.start();
+        thread.start();
     }
 }
