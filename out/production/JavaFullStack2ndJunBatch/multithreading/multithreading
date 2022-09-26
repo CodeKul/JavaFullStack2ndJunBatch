@@ -153,7 +153,7 @@ Synchronisation
   Types
 1. Process
 2. Thread Synchronisation
-	a) Mutual Exclusive
+	a) Mutual Exclusive(Mutex)
 		it will helps keep threads from interfering with one another
 			1. Synchronized method
 			2. Synchronized block
