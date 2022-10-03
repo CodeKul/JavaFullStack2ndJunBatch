@@ -8,7 +8,7 @@ Use proper naming conventions for class,variables & methods
 	- check whether given string is empty or not
 3. Find the divisor of the given number & calculate it's Sum
 	eg.Divisors of 6 are 1,2,3 and 6 . 1+2+3+6=12.
-	8 = 1,2,4,8
+	8 = 1,2,4,8 = 15
 4. Maintain account ledger of the customers
 	Define a class "Customer" having private members (id,name,mobile,email).
 	Define a class "Transactions" having private members(transactionType,accountNumber,amount)
@@ -21,3 +21,9 @@ Use proper naming conventions for class,variables & methods
 	double getBalance(accountId) - display all details of customer along with remaining balance
 	Handle invalid amount Exception
 	Handle invalid accountNumber Exception
+
+	123, credit,100
+	123.debit ,50
+	123,credit, 20
+
+	get bal = 30
