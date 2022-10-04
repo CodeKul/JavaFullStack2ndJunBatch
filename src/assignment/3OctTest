@@ -10,13 +10,13 @@ Use proper naming conventions for class,variables & methods
 	eg.Divisors of 6 are 1,2,3 and 6 . 1+2+3+6=12.
 	8 = 1,2,4,8 = 15
 4. Maintain account ledger of the customers
-	Define a class "Customer" having private members (id,name,mobile,email).
+//	Define a class "Customer" having private members (id,name,mobile,email).
 	Define a class "Transactions" having private members(transactionType,accountNumber,amount)
 	Define relationship between above classes
 	Define default and parametrised constructor wherever required.
 	transactionType having two values 1. Credit to add the amount
 									  2. Debit to deduct the amount
-	void addTransactions(accountNumber,transactionType,amount,customerId)
+	void addTransactions(accountNumber,transactionType,amount,customer)
 		using above method add transaction for particular method
 	double getBalance(accountId) - display all details of customer along with remaining balance
 	Handle invalid amount Exception
