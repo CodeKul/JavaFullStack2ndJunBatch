@@ -200,7 +200,7 @@ Homework
 1. Difference between Thread & Process
 2. difference between yield() & join() & sleep()
 3. movie ticket
-	//no of seats - 150 seats
+	//no of seats - 5 seats
 	- bookTicket
 4. bank example by static synchronisation
 5. bus ticket reservation

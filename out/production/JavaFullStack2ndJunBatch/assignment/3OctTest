@@ -1,0 +1,29 @@
+Use proper naming conventions for class,variables & methods
+
+1. Count the number of digits in given number
+	5236 = 4
+2. Toggle the cases of String
+	eg. CoDeKUL = cOdEkul
+	- handle exception if string contains other than alphabets character
+	- check whether given string is empty or not
+3. Find the divisor of the given number & calculate it's Sum
+	eg.Divisors of 6 are 1,2,3 and 6 . 1+2+3+6=12.
+	8 = 1,2,4,8 = 15
+4. Maintain account ledger of the customers
+//	Define a class "Customer" having private members (id,name,mobile,email).
+	Define a class "Transactions" having private members(transactionType,accountNumber,amount)
+	Define relationship between above classes
+	Define default and parametrised constructor wherever required.
+	transactionType having two values 1. Credit to add the amount
+									  2. Debit to deduct the amount
+	void addTransactions(accountNumber,transactionType,amount,customer)
+		using above method add transaction for particular method
+	double getBalance(accountId) - display all details of customer along with remaining balance
+	Handle invalid amount Exception
+	Handle invalid accountNumber Exception
+
+	123, credit,100
+	123.debit ,50
+	123,credit, 20
+
+	get bal = 30
