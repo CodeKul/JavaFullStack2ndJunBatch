@@ -21,9 +21,9 @@ Use proper naming conventions for class,variables & methods
 	double getBalance(accountId) - display all details of customer along with remaining balance
 	Handle invalid amount Exception
 	Handle invalid accountNumber Exception
-
-	123, credit,100
-	123.debit ,50
-	123,credit, 20
+1000
+	123, credit,100  1100
+	123.debit ,50    1050
+	123,credit, 20   1070
 
 	get bal = 30

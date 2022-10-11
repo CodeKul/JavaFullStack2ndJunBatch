@@ -1,0 +1,16 @@
+- class within another class
+- nested class
+
+Types:
+ 1. Member inner class
+
+ 2. Anonymous Inner class
+    - class without name
+      a) class (abstract or concrete class)
+      b) interface
+
+ 3. Local Inner class
+ 4. Static inner class
+
+Homework:
+1. Advantages/Disadvantages of Inner class
