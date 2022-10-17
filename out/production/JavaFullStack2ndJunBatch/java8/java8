@@ -20,6 +20,7 @@ Features:
 	addition of extra abstract methods
 	- benefit of java 8 functional interfaces is that we can use lambda expressions
 	- used to refer method of functional interface
+	eg.
 
 4. Method Reference
 	- prerequisites are functional interface & lambda exp
