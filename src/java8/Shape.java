@@ -1,7 +1,5 @@
 package java8;
 
-import java.util.concurrent.Callable;
-
 @FunctionalInterface
 public interface Shape {
     void calculateArea(int radius);
@@ -14,6 +12,5 @@ class ShapeImpl{
             System.out.println("Area of  circle "+area);
         };
         circleArea.calculateArea(5);
-
     }
 }
