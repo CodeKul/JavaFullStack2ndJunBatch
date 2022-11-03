@@ -7,7 +7,7 @@
 	- can not change/update value
 	- final variable that have no value(blank final variable or uninitialized final variable)
 	- blank final variable can be initialized in constructor only
-	- blank final static variable can be initialized in static block only
+	- static blank final variable can be initialized in static block only
 
 2. Method -
 	eg. final void show(){
